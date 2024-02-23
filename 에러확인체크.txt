@@ -1,0 +1,18 @@
+form 태그 (또는 다른 태그)가 적절한 범위에 있는지 확인
+
+디버깅 : 
+브레이크포인트 사용.
+F12 -> Source -> 줄 클릭 -> 페이지 실행기능
+
+  - 클릭한 줄에서 pause 됨
+
+줄 n개 클릭 시 :
+하나씩 멈춤
+
+form 태그 까먹지 말것;;; 2번이나 실수함.
+
+
+1. form 태그 시작과 끝 확인하기
+2. class = "com.codingbox.web.dto.MemberDTO" 처럼 잘 입력되었는지 확인해보기
+3. 구간별로 System.out.println("member.getUserid() : " + member.getUserid()); 
+위와 같은 식을 입력하여 파라미터를 받아오는지 Console창에서 확인해보기

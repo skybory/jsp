@@ -1,0 +1,23 @@
+프로젝트 세팅
+
+1. 다이나믹 프로젝트 DAYXX 만들기
+2. WEB-INF 하위에 web.xml 만들기(복붙해도 됨)
+3. 서버 생성하기(tomcat 연결하기)
+
+4. webapp 폴더에 index.html 웰컴페이지 만들기
+5. web-inf/lib 에 servlet-api.jar 만들기
+그다음 DAYXX 프로젝트 누른 상태로, 상단바에 Project->Properties->Java Build Path -Libraries -> Classpath -> servlt-api.jar 선택하고 Add JARs
+
+6? . webapp/reg 만들고 reg/reg.html 만들기		--> 이건 굳이X
+src/main/java/com.codingbox.web.servlet 만들기
+
+필터 파일 만들기
+src/main/java/com.codingbox.web.filter/CharacterEncodingFilter.java
+
+*네트워크 상태 / 에러코드
+  - HTTP 상태 코드 목록
+	-> 1XX (정보) : 요청을 받았으며, 프로세스를 계속한다.
+	-> 2XX (성공) : 요청을 성공적으로 받았으며 인식햇고 수용했다.
+	-> 3XX (리다이렉션) : 요청 완료를 위해 추가 작업 조치가 필요하다.
+	-> 4XX (클라이언트 오류) : 요청의 문법이 잘못되었거나 요청을 처리할 수 없다.
+	-> 5XX (서버 오류) : 서버가 명백히 유효한 요청에 대해 충족을 실패했다.

@@ -1,0 +1,10 @@
+새 데이터베이스 연결
+
+database : Oracle 로 고르고
+Oracle Connection Settings 에서
+Database : XE
+Username : 내가 원하는 이름
+Password : 내가 원하는 비밀번호
+입력하고
+Test Connection 클릭 -> Connected 알림창 나오면 확인, 완료
+
