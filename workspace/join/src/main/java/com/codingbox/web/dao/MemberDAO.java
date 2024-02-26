@@ -100,7 +100,44 @@ public class MemberDAO {
 		return member;
 	}
 	
-	
+	public boolean checkId(String userid) {
+		boolean result = false;
+		String sql 
+		= "SELECT COUNT(*) FROM tbl_member WHERE USERID =?";
+				
+			try {
+				// 디비 연결하고
+				conn = DBConnection.getConnection();
+				// 문장 날리고
+				pstm = conn.prepareStatement(sql);
+				
+				//1번 물음표에 userid를 넘김(내가 입력한 값)
+				pstm.setString(1, userid);
+				
+				//실행
+				rs = pstm.executeQuery();
+				
+				if(rs.next()) {
+					// count 값이 1일 경우 (getInt(1) 은 첫번째 열을 의미함)
+					if(rs.getInt(1) == 1) {
+						result = true;
+					}
+				}
+				else {
+					// 그렇지 않으면, 중복값이 없음
+					result = false;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("SQL 예외 발생");
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println("알 수 없는 예외 발생");			
+			}
+		
+		return result;
+	}
 	
 	
 }

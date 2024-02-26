@@ -103,7 +103,33 @@
  }
  
  
- 
+function checkId(userid) {
+	if (userid == "") {
+		alert("아이디를 입력해주세요");
+		return false;
+	} else {
+		// ajax 통신
+		let xhr = new XMLHttpRequest();
+		//띄어쓰기 주의
+		xhr.open("GET", "idcheck.jsp?userid=" + userid, true);
+		xhr.send();
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+				// 만약 회원가입이 가능한 아이디라면
+				// join_view.jsp 에서 id="text"인 영역의 멘트를 수정함.
+
+							
+				if (xhr.responseText.trim() == "ok") {
+					alert(xhr.responseText.trim());
+					$("#text").text("사용할 수 있는 아이디입니다.").css("color","green");
+				} else {
+					alert(xhr.responseText.trim());
+					$("#text").text("증복된 아이디입니다");
+				}
+			}
+		};
+	}
+}
  
  
  

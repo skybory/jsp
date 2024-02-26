@@ -8,16 +8,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <title>join view</title>
+<style>
+#text{
+color : tomato;
+font-weight : bold;
+}
+</style>
 </head>
 <body>
 
 <form action="join_db.jsp" method = "post" name = "joinForm" id="joinForm">
-	<p id = "text"> 사용할 수 있는 아이디입니다.</p>
+	<p id = "text"></p>
 	<p>
 		<label> 아이디
 			<input type="text" name="userid" id="userid">
 		</label>
-		<input type="button" value="중복확인" onclick="">
+		<input type="button" value="중복확인" onclick="checkId(joinForm.userid.value)">
 		
 	</p>
 
@@ -68,6 +74,7 @@
 	<p>
 		참고항목
 	</p>
+	
 	
 	<p>
 		<input type="button" value="가입완료" onclick="sendit()">

@@ -1,0 +1,10 @@
+{
+	"search_word" : [
+		{ "rank" : 1, "name" : "독감"},
+		{ "rank" : 2, "name" : "JSP"},
+		{ "rank" : 3, "name" : "JAVA"},
+		{ "rank" : 4, "name" : "WEB개발"},
+		{ "rank" : 5, "name" : "SPRINGBOOT"}
+	]
+
+}
