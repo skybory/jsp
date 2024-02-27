@@ -13,14 +13,14 @@
 MemberDTO mdto = (MemberDTO)session.getAttribute("session_id");
 
 if(mdto!=null){
-String userid = mdto.getUsername();%>
-
+String userid = mdto.getUserid();
+String username = mdto.getUsername();%>
 
 	<script>
-		alert("<%=userid%>님 안녕하세요!");
+		alert("<%=username%>님 안녕하세요!");
 	</script>
 	<p>
-	<%=userid%>님 <input type="button" value="로그아웃" onclick=" location.href='logout_db.jsp'">
+	<%=username%>님(<%=userid%>) <input type="button" value="로그아웃" onclick=" location.href='logout_db.jsp'">
 	</p>
 	
 <%	} else { %>

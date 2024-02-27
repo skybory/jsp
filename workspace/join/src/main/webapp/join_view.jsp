@@ -23,7 +23,7 @@ font-weight : bold;
 		<label> 아이디
 			<input type="text" name="userid" id="userid">
 		</label>
-		<input type="button" value="중복확인" onclick="checkId(joinForm.userid.value)">
+		<input type="button" value="중복확인" onclick="checkId3(joinForm.userid.value)">
 		
 	</p>
 
@@ -55,7 +55,6 @@ font-weight : bold;
 		</label>
 	</p>
 	
-	
 	<p>
 		<label> 핸드폰번호
 			<input type="text" name="userphone" id="userphone">
@@ -63,16 +62,17 @@ font-weight : bold;
 	</p>
 	
 	<p>
-		우편번호
+		우편번호 <input type="text" name="zipcode" id="zipcode" placeholder="우편번호">
+		<input type="button" onclick="DaumPostcode()" value="우편번호 찾기"><br>
 	</p>
 	<p>
-		주소
+		주소 <input type="text" name ="addr" id="addr" placeholder="주소"><br>
 	</p>
 	<p>
-		상세주소
+		상세주소 <input type="text" name="addrdetail" id="addrdetail" placeholder="상세주소">
 	</p>
 	<p>
-		참고항목
+		참고항목 <input type="text" name="addretc" id="addretc" placeholder="참고항목">
 	</p>
 	
 	
@@ -80,6 +80,7 @@ font-weight : bold;
 		<input type="button" value="가입완료" onclick="sendit()">
 	</p>
 	</form>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script src="user.js"></script>
 </body>
 

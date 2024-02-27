@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
-	session.removeAttribute("session_id");
-	response.sendRedirect("login_view.jsp");
+<%
+	String data = "hello";
+	pageContext.setAttribute("data",data);
 %>
+	${data}<br>
+	${10+20}<br>
+	${10>3}
 </body>
 </html>

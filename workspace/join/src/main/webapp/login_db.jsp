@@ -1,5 +1,5 @@
-<%@page import="com.codingbox.web.dto.MemberDTO"%>
 <%@page import="com.codingbox.web.dao.MemberDAO"%>
+<%@page import="com.codingbox.web.dto.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 </head>
 <body>
 <%
-	String userid = request.getParameter("userid");
+String userid = request.getParameter("userid");
 	String userpw = request.getParameter("userpw");
 	MemberDAO mdao = new MemberDAO();
 	MemberDTO mdto = mdao.login(userid,userpw);
@@ -18,8 +18,6 @@
 // 	session.setAttribute("session_id", userid);
 	
 	session.setAttribute("session_id",mdto);
-	
-
 %>
 
 	<script>

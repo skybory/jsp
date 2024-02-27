@@ -1,7 +1,7 @@
-<%@page import="com.codingbox.web.dao.MemberDAO"%>
+<%@page import="com.codingbox.web.dao.MemberDAO_back"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="com.codingbox.web.dbconnection.DBConnection"%>
+<%@page import="com.codingbox.web.dbconnection.DBConnection_back"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -14,10 +14,9 @@
 </head>
 <body>
 <%
-	String name = request.getParameter("name");
-	MemberDAO mdao = new MemberDAO();
+String name = request.getParameter("name");
+	MemberDAO_back mdao = new MemberDAO_back();
 	int age = mdao.getAge(name);
-
 %>
 
 <% if(age != 0) { %>

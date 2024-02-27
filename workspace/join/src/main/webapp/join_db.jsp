@@ -10,17 +10,13 @@
 </head>
 <body>
 <jsp:useBean id="member" class="com.codingbox.web.dto.MemberDTO"/>
-<%-- <jsp:setProperty property="userid" name="member"/> --%>
 <jsp:setProperty property="*" name="member"/>
 <!-- 앞에서 전달된 name 속성과 필드의 이름이 같으면 value가 자동으로 세팅된다 -->
 
 	<%
-	// 	MemberDTO mdto = new MemberDTO();
-	// 	mdto.setUserid(request.getParameter("userid"));
-	MemberDAO mdao = new MemberDAO();
-	System.out.println("member.getUserid() : " + member.getUserid());
-	if (mdao.join(member)) {
-		//회원가입 성공
+		MemberDAO mdao = new MemberDAO();
+		if (mdao.join(member)) {
+			//회원가입 성공
 	%>
 		<script>
 			alert("회원가입성공!");

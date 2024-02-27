@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
-	session.removeAttribute("session_id");
-	response.sendRedirect("login_view.jsp");
-%>
+	<form action="el_test4.jsp">
+		아이디		<input type="text" name="id"><br/>
+		비밀번호	<input type="text" name="pw"><br>
+		<input type="submit">
+	</form>
 </body>
 </html>
