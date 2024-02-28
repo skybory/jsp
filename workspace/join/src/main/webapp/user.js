@@ -215,17 +215,17 @@ function DaumPostcode() {
 					extraAddr = ' (' + extraAddr + ')';
 				}
 				// 조합된 참고항목을 해당 필드에 넣는다.
-				document.getElementById("daum_extraAddress").value = extraAddr;
+				document.getElementById("addretc").value = extraAddr;
 
 			} else {
-				document.getElementById("daum_extraAddress").value = '';
+				document.getElementById("addretc").value = '';
 			}
 
 			// 우편번호와 주소 정보를 해당 필드에 넣는다.
-			document.getElementById("daum_postcode").value = data.zonecode;
-			document.getElementById("daum_address").value = addr;
+			document.getElementById("zipcode").value = data.zonecode;
+			document.getElementById("addr").value = addr;
 			// 커서를 상세주소 필드로 이동한다.
-			document.getElementById("daum_detailAddress").focus();
+			document.getElementById("addrdetail").focus();
 		}
 	}).open();
 }

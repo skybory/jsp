@@ -1,10 +1,10 @@
-<%@page import="com.codingbox.web.dao.MemberDAO_back"%>
+<%@page import="com.codingbox.web.dao.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <%
 String userid = request.getParameter("userid");
-	MemberDAO_back mdao = new MemberDAO_back();
+	MemberDAO mdao = new MemberDAO();
 	
 	
 	// mdao.checkId(userid)	-> 

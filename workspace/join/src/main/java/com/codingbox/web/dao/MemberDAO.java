@@ -2,10 +2,12 @@ package com.codingbox.web.dao;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -60,6 +62,15 @@ public class MemberDAO {
 		}
 		
 		return result;
+	}
+	
+	public MemberDTO searchById(String userid) {
+		return sqlSession.selectOne("Member.searchById", userid);
+	}
+	
+	
+	public List<MemberDTO> getList() {
+		return sqlSession.selectList("Member.getList");
 	}
 	
 	

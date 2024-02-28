@@ -11,8 +11,8 @@
 	String data = "hello";
 	pageContext.setAttribute("data",data);
 %>
-	${data}<br>
-	${10+20}<br>
-	${10>3}
+	${data}<br/>
+<%-- 	${10+20}<br> --%>
+<%-- 	${10>3} --%>
 </body>
 </html>
