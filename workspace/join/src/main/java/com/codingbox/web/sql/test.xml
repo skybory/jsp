@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "file:///D:/gb_kty_1218/jsp/workspace/join/src/main/webapp/WEB-INF/lib/mybatis-3-mapper.dtd">
+ <mapper namespace="Test">
+	<insert id="insert" parameterType="hashmap">
+		INSERT INTO test VALUES (#{intdata},#{strdata})
+	</insert> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </mapper>
+ 

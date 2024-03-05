@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:useBean id="member" class="com.codingbox.web.dto.MemberDTO"/>
+
 <jsp:setProperty property="*" name="member" />
 <body>
 	<form action="search_db.jsp">

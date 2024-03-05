@@ -16,3 +16,4 @@ form 태그 까먹지 말것;;; 2번이나 실수함.
 2. class = "com.codingbox.web.dto.MemberDTO" 처럼 잘 입력되었는지 확인해보기
 3. 구간별로 System.out.println("member.getUserid() : " + member.getUserid()); 
 위와 같은 식을 입력하여 파라미터를 받아오는지 Console창에서 확인해보기
+4. Project -> Build Automatically 체크해둘것(가끔 해제됨)
