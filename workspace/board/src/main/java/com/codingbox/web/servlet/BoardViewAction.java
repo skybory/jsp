@@ -3,7 +3,9 @@ package com.codingbox.web.servlet;
 import com.codingbox.web.action.Action;
 import com.codingbox.web.action.ActionForward;
 import com.codingbox.web.dao.BoardDAO;
+import com.codingbox.web.dao.ReplyDAO;
 import com.codingbox.web.dto.BoardDTO;
+import com.codingbox.web.dto.ReplyDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,16 +17,13 @@ public class BoardViewAction implements Action {
 		ActionForward forward = new ActionForward();
 		
 		BoardDAO bdao = new BoardDAO();
-		BoardDTO bdto = new BoardDTO();
-		
+		ReplyDAO rdao = new ReplyDAO();
 		int boardnum = Integer.parseInt(request.getParameter("boardnum"));
 		
 		bdao.updateReadCount(boardnum);
+		
 		request.setAttribute("board", bdao.getDetail(boardnum));
-
-		
-		
-		
+		request.setAttribute("replylist", rdao.viewReply(boardnum));
 		forward.setRedirect(false);
 		forward.setPath("/board/boardview.jsp");
 	

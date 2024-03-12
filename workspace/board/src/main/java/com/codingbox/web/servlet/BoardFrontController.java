@@ -60,7 +60,14 @@ public class BoardFrontController extends HttpServlet {
 		case "/board/AddReply.bo":
 			forward = new AddReplyAction().execute(req,resp);
 			break;
-
+			
+		case "/board/UpdateReply.bo":
+			forward = new UpdateReplyAction().execute(req,resp);
+			//댓글 update 기능 완성
+			
+		case "/board/DeleteReply.bo":
+			forward = new DeleteReplyAction().execute(req,resp);
+			break;
 		}
 
 		if (forward != null) {
@@ -72,10 +79,5 @@ public class BoardFrontController extends HttpServlet {
 
 		}
 
-		// *.us url 매핑
-		// HttpServlet 상속
-		// do Get
-		// do Post
-		// do Process()
 	}
 }

@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.codingbox.web.dto.BoardDTO;
+import com.codingbox.web.dto.ReplyDTO;
 import com.codingbox.web.mybatis.SqlMapConfig;
 
 public class BoardDAO {

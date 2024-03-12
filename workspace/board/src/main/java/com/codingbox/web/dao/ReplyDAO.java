@@ -1,5 +1,8 @@
 package com.codingbox.web.dao;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -22,6 +25,32 @@ public class ReplyDAO {
 			result=true;
 		}
 		
+		return result;
+	}
+	public List<ReplyDTO> viewReply(int boardnum) {
+		List<ReplyDTO> rdtoList =
+				sqlSession.selectList("Reply.viewReply",boardnum);
+		return rdtoList;
+	}
+	
+	public boolean updateReply(String replycontents,int replynum) {
+		boolean result = false;
+		HashMap<String, Object> datas = new HashMap<>();
+		datas.put("replycontents", replycontents);	
+		datas.put("replynum", replynum);	
+		
+		if(sqlSession.update("Reply.updateReply",datas)==1) {
+			result = true;
+		}
+		return result;
+	}
+
+
+	public boolean deleteReply(int replynum) {
+		boolean result = false;
+		if(sqlSession.delete("Reply.deleteReply",replynum)==1) {
+			result = true;
+		}
 		return result;
 	}
 }
